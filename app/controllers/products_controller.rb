@@ -1,13 +1,8 @@
 class ProductsController < ApplicationController
+
   # GET /products
   # GET /products.json
   def index
-
-    Product.create(:title => "Topaz", :description => "An orange gemstone", :price => 10.99, :stock_quantity => 78)
-    Product.create(:title => "Emerald", :description => "A purple gemstone", :price => 13.37, :stock_quantity => 22)
-    Product.create(:title => "Sapphire", :description => "A green gemstone", :price => 19.99, :stock_quantity => 40)
-    Product.create(:title => "Ruby", :description => "A red gemstone", :price => 55.56, :stock_quantity => 18)
-    Product.create(:title => "Diamond", :description => "A white gemstone", :price => 88.55, :stock_quantity => 14)
 
     @stats = [{:label => "Product Average:",      :stat => (Product.average(:price))},
               {:label => "Product Max Price:",    :stat => (Product.maximum(:price))},
